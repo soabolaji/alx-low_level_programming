@@ -1,16 +1,15 @@
 #include <stdio.h>
 #include <string.h>
 
- int main() {
+	int main() {
 	
+/*initialising strings*/
 
-   //initialising strings
+	char str[] = "Programming is like building a multilingual puzzle\n";
 
-   char str[] = "Programming is like building a multilingual puzzle\n";
+/*Printing a standard output*/
 
-   //Printing a standard output
+	puts(str);
 
-   puts(str);
-
-   return 0;
- }
+	return 0;
+	}
