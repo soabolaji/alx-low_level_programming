@@ -4,14 +4,12 @@
 /**
  *main - entry point
  *
+ *Description: 'the outcome is a piece of art'
  *
- *Description: 'Printing std output with printf'
- *
- *
- *return: 0 always (sucess)
+ *Return: Always 0 (Success)
  */
-	int main()
+	int main(void)
 	{
 	printf("with proper grammar, but the outcome is a piece of art,\n");
-	return(0);
+	return (0);
 	}
