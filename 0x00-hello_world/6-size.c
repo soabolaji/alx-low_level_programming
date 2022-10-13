@@ -1,11 +1,12 @@
 #include <stdio.h>
 
-/**main - Entry point
+/**
+ * main - Entry point
  *
- *Description: 'C program that prints the size of various types'
+ * Description: 'C program that prints the size of various types'
  *
  *
- *Return: Always 0 (Success)
+ * Return: Always 0 (Success)
  *
  */
 	int main(void)
@@ -23,5 +24,4 @@
 	printf("Size of a long long int: %zu byte(s)\n", sizeof(longlongintType));
 	printf("Size of a float: %zu byte(s)\n", sizeof(floatType));
 	return (0);
-	}
-	
+	}	
