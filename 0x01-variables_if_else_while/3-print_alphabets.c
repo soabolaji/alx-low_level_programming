@@ -18,7 +18,7 @@
 	{
 	int x;
 	int y;
-	
+
 	for (x = 'A'; x <= 'Z'; x++)
 	{
 	putchar(tolower(x));
