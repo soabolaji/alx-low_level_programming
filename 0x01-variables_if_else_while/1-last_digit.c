@@ -20,7 +20,6 @@
 
 /*num to represent the last digit*/
 	int num;
-
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
 	num = n % 10;
@@ -39,5 +38,4 @@
 	}
 
 	return (0);
-
 	}
