@@ -19,7 +19,7 @@
 	for (multiple = 0; multiple <= 9; multiple++)
 	{
 	_putchar(',');
-	_putchat(' ');
+	_putchar(' ');
 
 	result = num * multiple;
 	if (result <= 9)
