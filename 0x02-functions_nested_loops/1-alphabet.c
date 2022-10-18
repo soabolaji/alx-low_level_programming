@@ -5,7 +5,7 @@
 /**
  * main - entry point
  *
- * print_alphabet - 'Print alphabet in lower case'
+ * Description: 'print_alphabet - Print alphabet in lower case'
  *
  * Return: always
  *
