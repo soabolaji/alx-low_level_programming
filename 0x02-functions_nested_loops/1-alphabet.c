@@ -3,9 +3,7 @@
 
 
 /**
- * main - entry point
- *
- * Description: 'print_alphabet - Print alphabet in lower case'
+ * print_alphabet - Print alphabet in lower case
  *
  * Return: always
  *
