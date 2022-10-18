@@ -5,7 +5,7 @@
 /**
  * main - entry point
  *
- * Description: 'Print alphabet in lower case'
+ * print_alphabet - 'Print alphabet in lower case'
  *
  * Return: always
  *
@@ -15,7 +15,7 @@
 	{
 	char alph;
 
-	for ( alph = 'a'; alph <= 'z'; alph++)
+	for (alph = 'a'; alph <= 'z'; alph++)
 	_putchar(alph);
 
 
