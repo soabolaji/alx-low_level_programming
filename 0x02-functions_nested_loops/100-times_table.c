@@ -27,7 +27,7 @@
 	_putchar(',');
 	_putchar(' ');
 
-	result = multiple * num;
+	result = num * multiple;
 	
 	if (result <= 99)
 	_putchar(' ');
@@ -44,7 +44,7 @@
 	{
 	_putchar((result / 10) + '0');
 	}
-	_putchar((result % 10) + '0')
+	_putchar((result % 10) + '0');
 	
 	}
 	_putchar('\n');
