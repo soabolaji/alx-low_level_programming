@@ -16,7 +16,8 @@
 	for (num = 0; num <= 9; num++)
 	{
 	_putchar('0');
-	for (multiple = 0; multiple <= 9; multiple++)
+
+	for (multiple = 1; multiple <= 9; multiple++)
 	{
 	_putchar(',');
 	_putchar(' ');
