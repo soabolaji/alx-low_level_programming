@@ -2,7 +2,7 @@
 
 
 /**
- * print_alphabet_x10: 'Print alphabet 10 times'
+ * print_alphabet_x10: Print alphabet 10 times
  *
  */
 
@@ -15,7 +15,6 @@
 
 	while (alph_x10++ <= 9)
 	{
-	
 	for (alph = 'a'; alph <= 'z'; alph++)
 	_putchar(alph);
 
