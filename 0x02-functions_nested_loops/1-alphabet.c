@@ -5,18 +5,17 @@
 /**
  * main - entry point
  *
- * Description: ' Print alphabet in lower case'
+ * Description: 'Print alphabet in lower case'
  *
- * Return: alwsys
+ * Return: always
  *
  */
 
 	void print_alphabet(void)
 	{
-	
 	char alph;
 
-	for ( alph = 'a'; alph < 'z'; alph++)
+	for ( alph = 'a'; alph <= 'z'; alph++)
 	_putchar(alph);
 
 
