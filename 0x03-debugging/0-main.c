@@ -4,7 +4,7 @@
 
 
 /**
- * main - tests function that prints if integer is positive or negative.
+ * main - tests function positive or negative integer.
  *
  * Return: 0
  *
@@ -16,6 +16,7 @@
 	{
 	
 	int i;
+	
 	i = 0;
 
 	positive_or_negative(i);
