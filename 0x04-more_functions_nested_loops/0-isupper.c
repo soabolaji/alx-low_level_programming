@@ -2,7 +2,7 @@
 
 
 /**
- * main - function that checks for uppercase character.
+ * _isupper - function that checks for uppercase character.
  *
  * Return: 1 if c is upper case otherwise 0.
  *
