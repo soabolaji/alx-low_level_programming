@@ -11,20 +11,20 @@
 
 void print_rev(char *s)
 {
-	int leth = 0;
-	int index, i;
-	char tmp;
+	int lenth = 0;
 
-	while (s[leth] -= '\0')
-	leth++;
-	index = leth - 1;
-
-	for (i = 0; i < leth / 2; i++)
+	while (lenth >= 0)
 	{
-	tmp = s[i];
-	s[i] = s[index];
-	s[index] = tmp;
-	index -= 1;
+	if (s[lenth] == '\0')
+	break;
+
+	lenth++;
+
 	}
+
+	for (lenth--; lenth >= 0; lenth--)
+	_putchar(s[lenth]);
+
+	_putchar('\n');
 
 }
