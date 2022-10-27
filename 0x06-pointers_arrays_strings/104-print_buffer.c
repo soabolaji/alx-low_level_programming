@@ -21,12 +21,12 @@ void print_buffer(char *b, int size)
 	for (index = 0; index < 10; index++)
 	{
 	if ((index + num) >= size)
-	printf(" ");
+	printf("  ");
 
 	else
 	printf("%02x", *(b + index + num));
 	if ((index % 2) != 0 && index != 0)
-	printf(" ");
+	printf("  ");
 	}
 
 	for (index = 0; index < 10; index++)
