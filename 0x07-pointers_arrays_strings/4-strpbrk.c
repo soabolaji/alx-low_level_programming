@@ -8,7 +8,7 @@
  *
  * @accept: set of bytes in string accept.
  *
- * Return: The pointer of the byte in s.
+ * Return: NULL value
  *
  */
 
@@ -16,15 +16,15 @@ char *_strpbrk(char *s, char *accept)
 {
 	int index, n;
 
-	for (index = 0; s[index] != '\0'; index++)
+	for (index = 0; *(s + index) != '\0'; index++)
 	{
 
-	for (n = 0; accept[n] != '\0'; n++)
+	for (n = 0; *(accept + n) != '\0'; n++)
 	{
 
-	if (s[index] == accept[n])
+	if (*(s +index) == *(accept + n))
 
-	return (s + 1);
+	return (s + index);
 
 	}
 
