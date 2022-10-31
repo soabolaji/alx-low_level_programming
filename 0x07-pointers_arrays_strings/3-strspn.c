@@ -12,8 +12,8 @@
 
 unsigned int _strspn(char *s, char *accept)
 {
-	unsigned int byte;
-	int i;
+	unsigned int byte, i;
+	int j;
 
 	while (*s)
 	{
