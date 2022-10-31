@@ -22,7 +22,7 @@ char *_strpbrk(char *s, char *accept)
 	for (n = 0; *(accept + n) != '\0'; n++)
 	{
 
-	if (*(s +index) == *(accept + n))
+	if (*(s + index) == *(accept + n))
 
 	return (s + index);
 
