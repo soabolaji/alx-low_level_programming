@@ -7,8 +7,7 @@ int s_root(int x, int y);
  * s_root - the square of x
  * @n: the number to be squared
  * @y: the number of time,
- *
- * Return: the square root.
+ * Return: square root
  *
  */
 
@@ -21,8 +20,11 @@ int s_root(int n, int y)
 	else if (y * y == n)
 	return (y);
 
+	if (y == n / 2)
+	return (-1);
+
 	else
-	return (s_root(n, y - 1));
+	return (s_root(n, y + 1));
 }
 
 
@@ -37,10 +39,14 @@ int s_root(int n, int y)
 
 int _sqrt_recursion(int n)
 {
+	int y = 0;
 
 	if (n < 0)
 	return (-1);
 
+	if (n == 1)
+	return (1);
+
 	else
-	return (s_root(n, (n + 1) / 2));
+	return (s_root(n, y));
 }
