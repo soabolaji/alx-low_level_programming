@@ -8,6 +8,8 @@ int s_root(int x, int y);
  * @n: the number to be squared
  * @y: the number of time,
  *
+ * Return: the square root.
+ *
  */
 
 int s_root(int n, int y)
@@ -16,7 +18,7 @@ int s_root(int n, int y)
 	if (y < 1)
 	return (-1);
 
-	else if (n == y * y)
+	else if (y * y == n)
 	return (y);
 
 	else
