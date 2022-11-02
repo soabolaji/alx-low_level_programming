@@ -21,7 +21,7 @@ int is_palindrome(char *s)
 	return (1);
 
 	return (palin_drome(s, 0, size - 1));
-
+}
 
 /**
  * char_len - to the length size
@@ -58,9 +58,9 @@ int palin_drome(char str[], int st, int end)
 	return (0);
 
 	if (st <= end || st < end + 1)
-	{
+
 	return (palin_drome(str, st + 1, end - 1));
-	}
 
 	return (1);
+
 }
