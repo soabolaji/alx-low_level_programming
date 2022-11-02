@@ -39,7 +39,6 @@ int s_root(int n, int y)
 
 int _sqrt_recursion(int n)
 {
-	int y = 0;
 
 	if (n < 0)
 	return (-1);
