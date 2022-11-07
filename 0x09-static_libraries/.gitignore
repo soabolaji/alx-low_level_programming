@@ -1,4 +1,0 @@
-#ingnore all .o and .c files
-
-*.c
-*.o
