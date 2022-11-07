@@ -15,29 +15,27 @@
 char *str_concat(char *s1, char *s2)
 {
 	char *concat_str;
-	unsigned int i, index = 0, size = 0;
-	unsigned int x, y;
+	int index, concat_index = 0, len = 0;
 
-	if (s1 == NULL || s2 == NULL)
-	s1 = s2 = "";
+	if (s1 == NULL)
+	s1 = "";
 
-	for (i = 0; s1[i] != '\0'; i++)
-	;
+	if (s2 == NULL)
+	s2 = "";
 
-	for (index = 0; s2[index] != '\0'; index++)
-	;
+	for (index = 0; s1[index] || s2[index]; index++)
+	len++;
 
-	size = i + index;
+	concat_str = malloc(sizeof(char) * len);
 
-	concat_str = malloc(sizeof(char) * (size + 1));
 	if (concat_str == NULL)
 	return (NULL);
 
-	for (x = 0; x < i; x++)
-	concat_str[x] = s1[x];
+	for (index = 0; s1[index]; index++)
+	concat_str[concat_index++] = s1[index];
 
-	for (y = 0; y < index; x++, y++)
-	concat_str[x] = s2[y];
+	for (index = 0; s2[index]; index++)
+	concat_str[concat_index++] = s2[index];
 
 	return (concat_str);
 }
