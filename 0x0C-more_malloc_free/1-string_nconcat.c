@@ -35,7 +35,7 @@ char *string_nmemcat(char *s1, char *s2, unsigned int n)
 	for (index = 0; s1[index]; index++)
 	memcat[size++] = s1[index];
 
-	for (index = 0; s2[index] && index < n; index++)
+	for (index = 0; s2[index] && index < size; index++)
 	memcat[size++] = s2[index];
 
 	memcat[size] = '\0';
