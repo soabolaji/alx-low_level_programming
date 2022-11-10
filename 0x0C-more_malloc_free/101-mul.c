@@ -1,7 +1,6 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
-
+#include <stdlib.h>
+#include <stdio.h>
 
 int find_len(char *str);
 char *create_xarray(int size);
@@ -134,7 +133,7 @@ void get_prod(char *prod, char *mult, int digit, int zeroes)
 	}
 
 	if (tens)
-	*prod = (tens % 10) + '0';
+		*prod = (tens % 10) + '0';
 }
 
 /**
@@ -185,6 +184,7 @@ void add_nums(char *final_prod, char *next_prod, int next_len)
  * @argc: An array of pointers to the arguments.
  *
  * Description: If the number of arguments is incorrect or one number
+ *              contains non-digits, the function exits with a status of 98.
  * Return: Always 0.
  */
 int main(int argc, char *argv[])
