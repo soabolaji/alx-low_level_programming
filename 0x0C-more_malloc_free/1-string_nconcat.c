@@ -4,49 +4,49 @@
 
 
 /**
- * string_nmemcat - to memcatenate two strings
+ * string_nconcat - to memcatenate two strings
  * @s1: first string
  * @s2: second string
  * @n: the number of bytes
  * Return: NULL if the function fails...
  */
 
-char *string_nmemcat(char *s1, char *s2, unsigned int n)
+char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i;
-	unsigned int j;
-	unsigned int s1_len;
-	unsigned int concat_len;
-	char *concat;
+	unsigned int num;
+	unsigned int size;
+	unsigned int length;
+	char *memconcat;
 
-	s1_len = 0;
+	size = 0;
 
 	if (s1 == NULL)
-		s1 = "";
+	s1 = "";
 
 	if (s2 == NULL)
-		s2 = "";
+	s2 = "";
 
 	for (i = 0; s1[i]; i++)
-		s1_len++;
+	size++;
 
-	concat_len = s1_len + n;
+	length = size + n;
 
-	concat = malloc(sizeof(char) * (concat_len + 1));
-	if (concat == NULL)
-		return (NULL);
+	memconcat = malloc(sizeof(char) * (length + 1));
+	if (memconcat == NULL)
+	return (NULL);
 
-	for (i = 0; i < s1_len; i++)
+	for (i = 0; i < size; i++)
 	{
-		concat[i] = s1[i];
+	memconcat[i] = s1[i];
 	}
 
-	for (j = 0; j < n; j++, i++)
+	for (num = 0; num < n; num++, i++)
 	{
-		concat[i] = s2[j];
+	memconcat[i] = s2[num];
 	}
 
-	concat[i] = '\0';
+	memconcat[i] = '\0';
 
-	return (concat);
+	return (memconcat);
 }
