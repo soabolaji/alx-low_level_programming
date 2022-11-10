@@ -13,33 +13,39 @@
 
 char *string_nmemcat(char *s1, char *s2, unsigned int n)
 {
-	char *memcat;
-	unsigned int index, size = n;
+	char *arr;
+	unsigned int i, j, co, co_2;
 
 	if (s1 == NULL)
 	s1 = "";
-
 	if (s2 == NULL)
 	s2 = "";
 
-	for (index = 0; s1[index]; index++)
-	size++;
+	for (i = 0; s1[i] != '\0'; i++)
+	{
+	}
 
-	memcat = malloc(sizeof(char) * (size + 1));
+	for (j = 0; s2[j] != '\0'; j++)
+	{
+	}
 
-	if (memcat == NULL)
+	if (n < j)
+	j = n;
+
+	j += i;
+	arr = malloc(sizeof(char *) * (j + 1));
+
+	if (arr == NULL)
 	return (NULL);
 
-	size = 0;
-
-	for (index = 0; s1[index]; index++)
-	memcat[size++] = s1[index];
-
-	for (index = 0; s2[index] && index < size; index++)
-	memcat[size++] = s2[index];
-
-	memcat[size] = '\0';
-
-	return (memcat);
-
+	for (co = 0; co < i; co++)
+	arr[co] = s1[co];
+	for (co_2 = 0; co < j; co_2++)
+	{
+	arr[co] = s2[co_2];
+	co++;
+	}
+	co++;
+	arr[co] = '\0';
+	return (arr);
 }
