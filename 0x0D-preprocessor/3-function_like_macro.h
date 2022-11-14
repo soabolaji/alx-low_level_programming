@@ -3,7 +3,8 @@
 
 
 /**
- * Desc: Header that define function like macro.
+ * ABS - Header that define function like macro.
+ * @x: the parameter
  * Return: Always 0
  */
 
