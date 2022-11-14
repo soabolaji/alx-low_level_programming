@@ -4,7 +4,9 @@
 
 /**
  * Desc: function-like macro SUM(x, y) that computes
- * 	the sum of the numbers x and y.
+ * the sum of the numbers x and y.
+ * @x: first number to be computed
+ * @y: second number
  * Return: Always 0
  *
  */
