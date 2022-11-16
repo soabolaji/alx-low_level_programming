@@ -11,10 +11,11 @@
  */
 
 
-int main(int __attribute__((__unused__)) argc, char *argv[])
+int main(int argc, char *argv[])
 {
-	int num1, num2;
-	char *op;
+	int one, two, ans;
+	int (*res)(int, int);
+	char *get_op;
 
 	if (argc != 4)
 	{
@@ -22,23 +23,26 @@ int main(int __attribute__((__unused__)) argc, char *argv[])
 	exit(98);
 	}
 
-	num1 = atoi(argv[1]);
-	op = argv[2];
-	num2 = atoi(argv[3]);
+	one = atoi(argv[1]);
+	two = atoi(argv[3]);
+	get_op = argv[2];
 
-	if (get_op_func(op) == NULL || op[1] != '\0')
+	/* added edge case if argv[2] was longer than 1 char*/
+	if (get_op_func(argv[2]) == NULL || argv[2][1] != '\0')
 	{
 	printf("Error\n");
 	exit(99);
 	}
 
-	if ((*op == '/' && num2 == 0) || (*op == '%' && num2 == 0))
+	if ((*get_op == '/' || *get_op == '%') && (*argv[3] == '0'))
 	{
 	printf("Error\n");
 	exit(100);
 	}
 
-	printf("%d\n", get_op_func(op)(num1, num2));
+	res = get_op_func(get_op);
+	ans = res(one, two);
 
+	printf("%d\n", ans);
 	return (0);
 }
