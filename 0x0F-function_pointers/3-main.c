@@ -13,9 +13,7 @@
 
 int main(int argc, char *argv[])
 {
-	int one, two, ans;
-	int (*res)(int, int);
-	char *get_op;
+	int a, b, res;
 
 	if (argc != 4)
 	{
@@ -23,26 +21,23 @@ int main(int argc, char *argv[])
 	exit(98);
 	}
 
-	one = atoi(argv[1]);
-	two = atoi(argv[3]);
-	get_op = argv[2];
-
-	/* added edge case if argv[2] was longer than 1 char*/
-	if (get_op_func(argv[2]) == NULL || argv[2][1] != '\0')
+	if (argv[2][1] || get_op_func(argv[2]) == NULL)
 	{
 	printf("Error\n");
 	exit(99);
 	}
 
-	if ((*get_op == '/' || *get_op == '%') && (*argv[3] == '0'))
+	a = atoi(argv[1]);
+	b = atoi(argv[3]);
+
+	if ((argv[2][0] == '/' || argv[2][0] == '%') && (b == 0))
 	{
 	printf("Error\n");
 	exit(100);
 	}
 
-	res = get_op_func(get_op);
-	ans = res(one, two);
+	res = (*get_op_func(argv[2]))(a, b);
 
-	printf("%d\n", ans);
+	printf("%d\n", res);
 	return (0);
 }
