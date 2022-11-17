@@ -16,18 +16,20 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 {
 	va_list para;
 	unsigned int index;
+	unsigned int anum;
 
 	if (separator == NULL)
-		return;
+	return;
 
 	va_start(para, n);
 
 	for (index = 0; index < n; index++)
 	{
-		printf("%d", va_arg(para, const unsigned int));
+	anum = va_arg(para, const unsigned int);
+	printf("%d", anum);
 
-		if (index != (n - 1) && separator != NULL)
-		printf("%s", separator);
+	if (separator && index < n - 1)
+	printf("%s", separator);
 	}
 
 	printf("\n");
