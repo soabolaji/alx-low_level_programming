@@ -8,7 +8,6 @@
  * @separator: is the string to be printed between numbers
  * @n: is the number of integers passed to the function
  * @...: is the number of parameters to be passed to the function
- * Return: Always 0
  */
 
 
@@ -18,14 +17,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 	unsigned int index;
 	unsigned int anum;
 
-	if (separator == NULL)
-	return;
-
 	va_start(para, n);
 
 	for (index = 0; index < n; index++)
 	{
-	anum = va_arg(para, const unsigned int);
+	anum = va_arg(para, int);
 	printf("%d", anum);
 
 	if (separator && index < n - 1)
