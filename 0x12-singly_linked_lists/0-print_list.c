@@ -15,13 +15,17 @@ size_t print_list(const list_t *b)
 	while (b)
 	{
 	if (b->str == NULL)
-	printf("[0] (nil)\n");
+	{
+	printf("[%u] (nil))\n", b->index);
 
-	else
+	b = b->next;
+	++node;
+	continue;
+	}
 	printf("[%d] %s\n", b->index, b->str);
 
-	node++;
 	b = b->next;
+	node++;
 	}
 
 	return (node);
