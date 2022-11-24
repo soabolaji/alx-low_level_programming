@@ -5,17 +5,17 @@
 #include <stdlib.h>
 
 /**
- * struct list_k - singly linked list
+ * struct list_s - singly linked list
  * @str: string - (malloc'ed string)
  * @index: length of the string
  * @next: points to the next node
  *
  */
-typedef struct list_k
+typedef struct list_s
 {
 	char *str;
 	unsigned int index;
-	struct list_k *next;
+	struct list_s *next;
 } list_t;
 
 /* Functions prototype */
