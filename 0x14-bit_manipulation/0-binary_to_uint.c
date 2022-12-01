@@ -3,7 +3,7 @@
 
 
 /**
- * binary_to_unit - the function that convert a binary
+ * binary_to_uint - the function that convert a binary
  *		number to an unsigned int.
  * @b: a pointer that point to a string of 0 and chars
  * Return: the converted number or 0
